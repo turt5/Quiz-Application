@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quizapp.quizapp.QuizPageController">
+   <children>
+      <Label fx:id="questionLabel" alignment="TOP_LEFT" layoutX="63.0" layoutY="47.0" prefHeight="83.0" prefWidth="475.0" text="Question" wrapText="true" />
+      <RadioButton fx:id="option1Radio" layoutX="63.0" layoutY="140.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="230.0" text="Option 1">
+         <toggleGroup>
+            <ToggleGroup fx:id="options" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="option2Radio" layoutX="63.0" layoutY="180.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="230.0" text="Option 2" toggleGroup="$options" />
+      <RadioButton fx:id="option3Radio" layoutX="64.0" layoutY="220.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="230.0" text="Option 3" toggleGroup="$options" />
+      <RadioButton fx:id="option4Radio" layoutX="65.0" layoutY="260.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="230.0" text="Option 4" toggleGroup="$options" />
+      <Button layoutX="284.0" layoutY="315.0" mnemonicParsing="false" onAction="#submitNextAction" prefHeight="25.0" prefWidth="57.0" text="Next" />
+      <Label fx:id="timeLabel" layoutX="281.0" layoutY="24.0" text="Time: " />
+   </children>
+</AnchorPane>

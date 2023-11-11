@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.quizapp.quizapp.ResultController">
+   <children>
+      <Label layoutX="246.0" layoutY="37.0" text="Your Result">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="resultLable" alignment="CENTER" layoutX="97.0" layoutY="90.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-color: lightblue; -fx-background-radius: 5;" text="x/y" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="77.0" layoutY="208.0" text="Correct Answers:" />
+      <ProgressIndicator fx:id="correctProgressIndicator" layoutX="251.0" layoutY="88.0" minHeight="100.0" minWidth="100.0" prefHeight="72.0" prefWidth="74.0" progress="0.59" style="-fx-background-color: lightgreen; -fx-font-size: 15;">
+         <padding>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+         </padding></ProgressIndicator>
+      <ProgressIndicator fx:id="wrongProgressIndicator" layoutX="407.0" layoutY="88.0" minHeight="100.0" minWidth="100.0" prefHeight="72.0" prefWidth="74.0" progress="0.41" style="-fx-background-color: tomato; -fx-font-size: 15; -fx-progress-color: darkred;">
+         <padding>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+         </padding>
+      </ProgressIndicator>
+      <TableView fx:id="answerViewTable" layoutX="77.0" layoutY="236.0" prefHeight="132.0" prefWidth="459.0">
+        <columns>
+          <TableColumn fx:id="idTableColumn" prefWidth="83.0" text="ID" />
+          <TableColumn fx:id="questionTableColumn" prefWidth="232.0" text="Question" />
+            <TableColumn fx:id="answerTableColumn" prefWidth="143.0" text="Answer" />
+        </columns>
+      </TableView>
+      <Button layoutX="510.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+      <Button layoutX="455.0" layoutY="40.0" mnemonicParsing="false" onAction="#gotoHome" text="Home" />
+   </children>
+</AnchorPane>
